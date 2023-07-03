@@ -3,7 +3,7 @@
 using namespace std;
 
 // Define your function here
-double funct(double x) {
+double equation(double x) {
     return pow(x, 3) + pow(x,2) - 1; 
 }
 
@@ -16,8 +16,8 @@ double newtonRaphson(double x0, double epsilon, int maxIterations) {
     double x = x0;
     int iterations = 0;
 
-    while (abs(funct(x)) > epsilon && iterations < maxIterations) {
-        x = x - (funct(x) / derivative(x));
+    while (abs(equation(x)) > epsilon && iterations < maxIterations) {
+        x = x - (equation(x) / derivative(x));
         iterations++;
     }
 
