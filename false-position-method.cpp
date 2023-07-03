@@ -19,7 +19,7 @@ double falsePositionMethod(double a, double b, double tolerance) {
         
         // Calculate the approximate root using the false position formula
         c = (a * fb - b * fa) / (fb - fa);
-        cout<<fabs(equation(c))<<endl;
+       
         // Check if c is the root
         if (equation(c) == 0.0){
             cout<<c;
