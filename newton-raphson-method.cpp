@@ -1,10 +1,9 @@
-#include <iostream>
-#include <cmath>
+#include<bits/stdc++.h>
 
 using namespace std;
 
 // Define your function here
-double function(double x) {
+double funct(double x) {
     return pow(x, 3) + pow(x,2) - 1; 
 }
 
@@ -17,8 +16,8 @@ double newtonRaphson(double x0, double epsilon, int maxIterations) {
     double x = x0;
     int iterations = 0;
 
-    while (abs(function(x)) > epsilon && iterations < maxIterations) {
-        x = x - function(x) / derivative(x);
+    while (abs(funct(x)) > epsilon && iterations < maxIterations) {
+        x = x - (funct(x) / derivative(x));
         iterations++;
     }
 
@@ -27,7 +26,7 @@ double newtonRaphson(double x0, double epsilon, int maxIterations) {
 
 int main() {
     double initialGuess = 1;
-    double epsilon = 0.0001;
+    double epsilon = 0.001;
     int maxIterations = 100;
 
     double root = newtonRaphson(initialGuess, epsilon, maxIterations);
