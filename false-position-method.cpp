@@ -22,11 +22,8 @@ double falsePositionMethod(double a, double b, double tolerance) {
        
         // Check if c is the root
         if (equation(c) == 0.0){
-            cout<<c;
             return c;
         }
-            
-        
         // Update the interval based on the signs of function values
         if (equation(c) * fa < 0)
             b = c;
